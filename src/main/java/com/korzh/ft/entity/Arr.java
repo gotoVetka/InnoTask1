@@ -1,13 +1,15 @@
 package com.korzh.ft.entity;
 
-public class Arr {
-  private List<Integer> ArrList;
+import java.util.ArrayList;
 
-  public List<Integer> getArrList() {
+public class Arr {
+  private ArrayList<Integer> ArrList;
+
+  public ArrayList<Integer> getArrList() {
     return ArrList;
   }
 
-  public void setArrList(List<Integer> newArrList) {
+  public void setArrList(ArrayList<Integer> newArrList) {
     ArrList = newArrList;
   }
 
@@ -31,7 +33,7 @@ public class Arr {
     private Builder() {
     }
 
-    public Builder setArrList(List<Integer> newArrList) {
+    public Builder setArrList(ArrayList<Integer> newArrList) {
       Arr.this.ArrList = newArrList;
       return this;
     }
