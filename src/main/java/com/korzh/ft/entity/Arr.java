@@ -16,7 +16,7 @@ public class Arr {
   public boolean equals(Object toEquals) {
     if (toEquals == null || getClass() != toEquals.getClass()) return false;
     Arr arr = (Arr) toEquals;
-    return ArrList == toEquals.ArrList;
+    return ArrList == arr.ArrList;
   }
 
   public int hashCode() {
