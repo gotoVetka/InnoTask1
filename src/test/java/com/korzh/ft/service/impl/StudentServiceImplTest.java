@@ -21,7 +21,7 @@ class StudentServiceImplTest {
     int expected = 23;
     StudentServiceImpl service = new StudentServiceImpl();
     int actual = service.findMaxAgeForStudent(students);
-    assert(expected, actual);
+    assertEquals(expected, actual);
   }
 
   @org.junit.jupiter.api.Test

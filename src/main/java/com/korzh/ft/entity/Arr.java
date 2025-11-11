@@ -1,32 +1,44 @@
 package com.korzh.ft.entity;
 
 public class Arr {
-  Arr next;
-  Arr prev;
-  int value;
+  private List<Integer> ArrList;
 
-
-
-  public Arr(Arr next, Arr prev, int value) {
-    this.next = next;
-    this.prev = prev;
-    this.value = value;
+  public List<Integer> getArrList() {
+    return ArrList;
   }
 
-  public void moveNext(){
-    this = this.next != null ? this.next : this;
+  public void setArrList(List<Integer> newArrList) {
+    ArrList = newArrList;
   }
 
-  public void moveBack(){
-    this = this.prev != null ? this.prev : this;
+  public boolean equals(Object toEquals) {
+    if (toEquals == null || getClass() != toEquals.getClass()) return false;
+    Arr arr = (Arr) toEquals;
+    return ArrList == toEquals.ArrList;
   }
 
-  @Override
-  public String toString() {
-    return "Arr{" +
-            "next=" + next +
-            ", prev=" + prev +
-            ", value=" + value +
-            '}';
+  public int hashCode() {
+    int result = 0;
+    result = 31 * result + ArrList.hashCode();
+    return result;
+  }
+  public static Builder newBuilder() {
+    return new Arr().new Builder();
+  }
+
+  public class Builder {
+
+    private Builder() {
+    }
+
+    public Builder setArrList(List<Integer> newArrList) {
+      Arr.this.ArrList = newArrList;
+      return this;
+    }
+
+    public Arr build() {
+      return Arr.this;
+    }
+
   }
 }
