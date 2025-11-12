@@ -11,4 +11,7 @@ public interface CustomIntArrService {
   int findPositiveCount(CustomIntArr customIntArr) throws CustomNullException;
   int findNegativeCount(CustomIntArr customIntArr) throws CustomNullException;
   void replaceByIndex(CustomIntArr customIntArr, int index, int newValue) throws CustomNullException;
+  void firstSort(CustomIntArr customIntArr) throws CustomNullException;
+  void secondSort(CustomIntArr customIntArr) throws CustomNullException;
+  void thirdSort(CustomIntArr customIntArr) throws CustomNullException;
 }

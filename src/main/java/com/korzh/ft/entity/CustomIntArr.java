@@ -19,11 +19,6 @@ public class CustomIntArr {
     this.id = builder.id;
   }
 
-  public CustomIntArr(int[] elements, long id) {
-    this.elements = elements;
-    this.id = id;
-  }
-
   public int[] getElements() {
     return elements.clone();
   }
@@ -60,13 +55,14 @@ public class CustomIntArr {
             Arrays.toString(elements) +
             ", id=" + id + "]";
   }
+
   public Builder builder() {
     return new Builder();
   }
 
-  public class Builder {
-    private int[] elements;
-    private long id;
+  public static class Builder {
+    private int[] elements = new int[0];
+    private long id = 0;
 
     public Builder elements(int[] newElements) {
       if (elements != null) {
@@ -86,4 +82,5 @@ public class CustomIntArr {
       return new CustomIntArr(this);
     }
   }
+
 }

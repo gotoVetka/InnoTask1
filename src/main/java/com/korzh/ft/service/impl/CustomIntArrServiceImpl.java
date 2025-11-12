@@ -6,7 +6,10 @@ import org.slf4j.LoggerFactory;
 import com.korzh.ft.entity.CustomIntArr;
 import com.korzh.ft.service.CustomIntArrService;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
 
 public class CustomIntArrServiceImpl implements CustomIntArrService{
   private final Logger logger = LoggerFactory.getLogger(CustomIntArrServiceImpl.class);
@@ -99,5 +102,61 @@ public class CustomIntArrServiceImpl implements CustomIntArrService{
     }
     result[index] = value;
     customIntArr.setElements(result);
+  }
+  @Override
+  public void firstSort(CustomIntArr customIntArr) throws CustomNullException{ // Bubble
+    int[] array = customIntArr.getElements();
+    for (int i = 1; i < array.length; i++) {
+      int key = array[i];
+      int j = i - 1;
+      while (j >= 0 && array[j] > key) {
+        array[j + 1] = array[j];
+        j--;
+      }
+      array[j + 1] = key;
+    }
+    customIntArr.setElements(array);
+  }
+  public void secondSort(CustomIntArr customIntArr) throws CustomNullException{ // gnome
+    int[] arr = customIntArr.getElements();
+    int n = arr.length;
+    int i = 1;
+    while (i < arr.length) {
+      if (i == 0 || arr[i - 1] <= arr[i]) i++;
+      else {
+        int tmp = arr[i];
+        arr[i] = arr[i - 1];
+        arr[i - 1] = tmp;
+        i--;
+      }
+    }
+    customIntArr.setElements(arr);
+  }
+  public void thirdSort(CustomIntArr customIntArr) throws CustomNullException{
+    int[] arr = customIntArr.getElements();
+    boolean swapped = true;
+    int start = 0, end = arr.length - 1;
+    while (swapped) {
+      swapped = false;
+      for (int i = start; i < end; i++) {
+        if (arr[i] > arr[i + 1]) {
+          int tmp = arr[i];
+          arr[i] = arr[i + 1];
+          arr[i + 1] = tmp;
+          swapped = true;
+        }
+      }
+      if (!swapped) break;
+      swapped = false;
+      end--;
+      for (int i = end - 1; i >= start; i--) {
+        if (arr[i] > arr[i + 1]) {
+          int tmp = arr[i]; arr[i] = arr[i + 1]; arr[i + 1] = tmp;
+          swapped = true;
+        }
+      }
+      start++;
+    }
+    customIntArr.setElements(arr);
   }
 }
