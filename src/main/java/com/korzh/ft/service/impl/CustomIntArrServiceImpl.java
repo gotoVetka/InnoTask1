@@ -19,8 +19,7 @@ public class CustomIntArrServiceImpl implements CustomIntArrService{
       throw new CustomNullException(ARR_IS_NULL);
     }
     int max = 0;
-    int[] tmpArr = customIntArr.getElements();
-    for(int elem : tmpArr){
+    for(int elem : customIntArr.getElements()){
       if(elem>max)max = elem;
     }
     return max;
@@ -45,8 +44,7 @@ public class CustomIntArrServiceImpl implements CustomIntArrService{
       throw new CustomNullException(ARR_IS_NULL);
     }
     int result = 0;
-    int[] tmpArr = customIntArr.getElements();
-    for(int elem : tmpArr){
+    for(int elem : customIntArr.getElements()){
       result += elem;
     }
     return result;

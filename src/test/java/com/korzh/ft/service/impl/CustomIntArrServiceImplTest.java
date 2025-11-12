@@ -11,7 +11,7 @@ import java.util.Arrays;
 import static org.junit.jupiter.api.Assertions.*;
 
 class CustomIntArrServiceImplTest {
-  CustomIntArr arrToTest = new CustomIntArr().builder().elements(new int[]{1,2,3}).id(23).build();
+  CustomIntArr arrToTest = new CustomIntArr(new int[]{1,2,3}, 2);
   CustomIntArrServiceImpl impl = new CustomIntArrServiceImpl();
 
   @BeforeEach
