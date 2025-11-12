@@ -25,8 +25,7 @@ public class CustomIntArr {
   }
 
   public int[] getElements() {
-    int[] tmpElements = elements.clone();
-    return tmpElements;
+    return elements;
   }
 
   public void setElements(int[] elements) {
@@ -70,6 +69,8 @@ public class CustomIntArr {
     private int[] elements;
     private long id;
 
+    public Builder(){
+    }
     public Builder elements(int[] newElements) {
       if (elements != null) {
         this.elements = newElements.clone();
@@ -77,6 +78,7 @@ public class CustomIntArr {
         this.elements = new int[0];
         
       }
+
       return this;
     }
 
