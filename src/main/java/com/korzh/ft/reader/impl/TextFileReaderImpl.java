@@ -13,9 +13,9 @@ import java.util.ArrayList;
 public class TextFileReaderImpl implements CustomReader {
   private static final Logger log = LoggerFactory.getLogger(TextFileReaderImpl.class);
 
-  public ArrayList<String> readFromFile(String filename){
+  public ArrayList<String> readFromFile(String filepath){
     ArrayList<String> stringsFromFile = new ArrayList<>();
-    Path path = Path.of(filename);
+    Path path = Path.of(filepath);
     try (BufferedReader reader = Files.newBufferedReader(path, StandardCharsets.UTF_8)) {
       String line;
       while ((line = reader.readLine()) != null) {
@@ -23,7 +23,7 @@ public class TextFileReaderImpl implements CustomReader {
       }
       reader.close();
     } catch (IOException e) {
-      log.warn("Read file error: " + filename);
+      log.warn("Read file error: " + filepath);
     }
 
     return stringsFromFile;
