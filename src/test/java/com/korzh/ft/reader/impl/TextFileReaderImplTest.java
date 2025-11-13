@@ -25,8 +25,7 @@ class TextFileReaderImplTest {
   @Test
   void readFromFile() {
     String[] expected = new String[]{"1; 2; 3"};
-    ArrayList<String> actual = reader.readFromFile("data.txt");
+    ArrayList<String> actual = reader.readFromFile(".//.//data.txt");
     assert(Arrays.equals(expected, actual.toArray()));
   }
-
 }
