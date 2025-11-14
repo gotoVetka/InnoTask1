@@ -12,6 +12,6 @@ public class CustomIntArrFactory {
     return new CustomIntArr().builder().elements(Arrays.copyOf(elements, elements.length)).id(id).build();
   }
   public static CustomIntArr empty() {
-    return new CustomIntArr().builder().elements(Arrays.copyOf(new int[0], 0)).id(0).build();
+    return new CustomIntArr().builder().elements(new int[0]).id(0).build();
   }
 }

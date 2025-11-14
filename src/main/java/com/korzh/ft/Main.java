@@ -1,15 +1,9 @@
 package com.korzh.ft;
 
-import com.korzh.ft.entity.CustomIntArr;
 import com.korzh.ft.exception.CustomNullException;
-import com.korzh.ft.parcer.CustomParcer;
-import com.korzh.ft.parcer.impl.TextFileParcer;
-import com.korzh.ft.reader.CustomReader;
-import com.korzh.ft.reader.impl.TextFileReaderImpl;
-import com.korzh.ft.service.impl.CustomIntArrServiceImpl;
-import com.korzh.ft.validator.CustomValidator;
+import com.korzh.ft.parser.CustomParcer;
+import com.korzh.ft.parser.impl.TextFileParcer;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 
 public class Main {

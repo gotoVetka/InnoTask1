@@ -1,8 +1,6 @@
-package com.korzh.ft.parcer.impl;
+package com.korzh.ft.parser.impl;
 
-import com.korzh.ft.parcer.CustomParcer;
-import com.korzh.ft.reader.CustomReader;
-import com.korzh.ft.validator.CustomValidator;
+import com.korzh.ft.parser.CustomParcer;
 
 public class TextFileParcer implements CustomParcer {
   public int[] getIntArray(String stringToParse) {

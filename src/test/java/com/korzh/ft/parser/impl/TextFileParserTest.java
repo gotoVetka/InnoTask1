@@ -1,13 +1,11 @@
-package com.korzh.ft.parcer.impl;
+package com.korzh.ft.parser.impl;
 
-import com.korzh.ft.parcer.CustomParcer;
+import com.korzh.ft.parser.CustomParcer;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class TextFileParcerTest {
   CustomParcer parcer;
