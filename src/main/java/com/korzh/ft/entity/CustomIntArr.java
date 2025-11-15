@@ -8,7 +8,6 @@ import java.sql.Array;
 import java.util.Arrays;
 
 public class CustomIntArr {
-  private final Logger logger = LoggerFactory.getLogger(CustomIntArrServiceImpl.class);
   private int[] elements;
   private long id;
 
@@ -62,13 +61,11 @@ public class CustomIntArr {
 
   public static class Builder {
     private int[] elements = new int[0];
-    private long id = 0;
+    private long id;
 
     public Builder elements(int[] newElements) {
       if (elements != null) {
         this.elements = newElements.clone();
-      } else {
-        this.elements = new int[0];
       }
       return this;
     }

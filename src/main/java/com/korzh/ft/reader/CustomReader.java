@@ -5,5 +5,5 @@ import com.korzh.ft.exception.CustomException;
 import java.util.ArrayList;
 
 public interface CustomReader {
-  ArrayList<String> readFromFile(String filepath) throws CustomException;
+  ArrayList<String> readFromFile(String filename) throws CustomException;
 }
