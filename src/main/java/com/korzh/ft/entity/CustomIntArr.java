@@ -1,15 +1,17 @@
 package com.korzh.ft.entity;
 
-import com.korzh.ft.service.impl.CustomIntArrServiceImpl;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import com.korzh.ft.observer.CustomIntArrayObservable;
+import com.korzh.ft.observer.CustomObserver;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
-import java.sql.Array;
 import java.util.Arrays;
 
-public class CustomIntArr {
+public class CustomIntArr implements CustomIntArrayObservable {
+  private static final Logger logger = LogManager.getLogger();
   private int[] elements;
   private long id;
+  private CustomObserver observer;
 
   public CustomIntArr(){};
 
@@ -24,14 +26,21 @@ public class CustomIntArr {
 
   public void setElements(int[] elements) {
     this.elements = elements.clone();
+    if(this.observer != null){
+      this.observer.update(this);
+    }
   }
 
   public long getId() {
     return id;
+
   }
 
   public void setId(long id) {
     this.id = id;
+    if(this.observer != null){
+      observer.update(this);
+    }
   }
 
   @Override
@@ -55,6 +64,24 @@ public class CustomIntArr {
             ", id=" + id + "]";
   }
 
+  @Override
+  public void addObserver(CustomObserver observer) {
+    if(observer != null) {
+      this.observer = observer;
+    }
+  }
+
+  @Override
+  public void removeObserver(CustomObserver observer) {
+    this.observer = null;
+  }
+
+  @Override
+  public void notifyObservers() {
+    if (observer != null) {
+      observer.update(this);
+    }
+  }
   public Builder builder() {
     return new Builder();
   }
@@ -76,6 +103,7 @@ public class CustomIntArr {
     }
 
     public CustomIntArr build() {
+      logger.info("new CustomIntArr created: {} ", this);
       return new CustomIntArr(this);
     }
   }

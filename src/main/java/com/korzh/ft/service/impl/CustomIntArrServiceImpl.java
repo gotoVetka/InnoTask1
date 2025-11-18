@@ -6,7 +6,6 @@ import com.korzh.ft.entity.CustomIntArr;
 import com.korzh.ft.exception.CustomException;
 import com.korzh.ft.service.CustomIntArrService;
 
-import java.util.Arrays;
 
 public class CustomIntArrServiceImpl implements CustomIntArrService{
   private final Logger logger = LoggerFactory.getLogger(CustomIntArrServiceImpl.class);

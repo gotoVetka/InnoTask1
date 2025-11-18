@@ -1,20 +1,19 @@
 package com.korzh.ft.reader.impl;
 
 import com.korzh.ft.exception.CustomException;
-import com.korzh.ft.reader.CustomReader;
+import com.korzh.ft.reader.CustomFileReader;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import java.io.File;
 import java.util.ArrayList;
 import java.util.Arrays;
 
 class TXTReaderImplTest {
-  CustomReader reader;
+  CustomFileReader reader;
   @BeforeEach
   void setUp() {
-    reader = new TXTReaderImpl();
+    reader = new TXTFileReaderImpl();
   }
 
   @AfterEach
@@ -25,7 +24,7 @@ class TXTReaderImplTest {
   @Test
   void readFromFile() throws CustomException {
     String[] expected = new String[]{"1; 2; 3"};
-    ArrayList<String> actual = reader.readFromFile("test.txt");
+    ArrayList<String> actual = reader.readStringsfromfile("test.txt");
     assert(Arrays.equals(expected, actual.toArray()));
   }
 }

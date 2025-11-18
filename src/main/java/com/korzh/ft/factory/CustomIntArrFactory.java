@@ -9,7 +9,7 @@ public class CustomIntArrFactory {
   private CustomIntArrFactory() {}
 
   public static CustomIntArr create(int[] elements, long id) {
-    return new CustomIntArr().builder().elements(Arrays.copyOf(elements, elements.length)).id(id).build();
+    return new CustomIntArr().builder().elements(elements.clone()).id(id).build();
   }
   public static CustomIntArr empty() {
     return new CustomIntArr().builder().elements(new int[0]).id(0).build();

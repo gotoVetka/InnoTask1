@@ -1,7 +1,7 @@
 package com.korzh.ft.reader.impl;
 
 import com.korzh.ft.exception.CustomException;
-import com.korzh.ft.reader.CustomReader;
+import com.korzh.ft.reader.CustomFileReader;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -11,10 +11,10 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.ArrayList;
 
-public class TXTReaderImpl implements CustomReader {
-  private static final Logger log = LoggerFactory.getLogger(TXTReaderImpl.class);
+public class TXTFileReaderImpl implements CustomFileReader {
+  private static final Logger log = LoggerFactory.getLogger(TXTFileReaderImpl.class);
 
-  public ArrayList<String> readFromFile(String filename) throws CustomException{
+  public ArrayList<String> readStringsfromfile(String filename) throws CustomException{
     ArrayList<String> stringsFromFile = new ArrayList<>();
     Path path;
     if(filename != null){
