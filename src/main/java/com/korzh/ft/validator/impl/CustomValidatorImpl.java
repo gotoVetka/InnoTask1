@@ -5,15 +5,15 @@ import com.korzh.ft.validator.CustomValidator;
 import java.util.regex.Pattern;
 
 public class CustomValidatorImpl implements CustomValidator {
-  private String stringPatternRegex;
+  private String arrayLinePatternRegex;
 
   public CustomValidatorImpl(String stringPatternRegex){
-    this.stringPatternRegex = stringPatternRegex;
+    this.arrayLinePatternRegex = stringPatternRegex;
   }
 
   @Override
   public boolean isStringValid(String stringToValid) {
-    Pattern pattern = Pattern.compile(stringPatternRegex);
+    Pattern pattern = Pattern.compile(arrayLinePatternRegex);
     return pattern.matcher(stringToValid).matches();
   }
 }

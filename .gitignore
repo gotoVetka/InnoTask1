@@ -7,3 +7,5 @@ src/main/java/com/korzh/ft/Main.java
 .idea/workspace.xml
 src/main/java/com/korzh/ft/Main.java
 src/main/java/com/korzh/ft/data.txt
+/logs/
+/.idea/

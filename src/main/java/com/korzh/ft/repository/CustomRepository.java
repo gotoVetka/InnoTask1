@@ -15,51 +15,49 @@ public class CustomRepository {
   public static final Logger logger = LogManager.getLogger();
   private static CustomRepository instance;
 
-  private final List<CustomIntArr> arrays = new ArrayList<>();
+  private final List<CustomIntArr> array = new ArrayList<>();
 
   private CustomRepository() {}
 
   public static CustomRepository getInstance() {
     if(instance == null) {
-      logger.info("create new instance of repository");
+      logger.info("Created new instance of repository");
       instance = new CustomRepository();
     }
-    logger.info("return instance of repository");
+    logger.info("Returned instance of repository");
     return instance;
   }
 
   public void add(CustomIntArr customIntArr) throws CustomException {
     if (customIntArr == null) {
-      throw new CustomException("Bad entity to add");
+      throw new CustomException("Bad entity to adding");
     }
-
-    logger.info("add custom array {} in repo",customIntArr);
+    logger.info("Added custom array {} in repo",customIntArr);
     customIntArr.notifyObservers();
-    arrays.add(customIntArr);
+    array.add(customIntArr);
 
   }
 
   public void remove(CustomIntArr customIntArray) throws CustomException {
     if (customIntArray == null) {
-      throw new CustomException("Bad entity to delete");
+      throw new CustomException("Bad entity to removing");
     }
-    logger.info("remove custom array {} from repo",customIntArray);
+    logger.info("Removed custom array {} from repository",customIntArray);
     CustomWarehouse.getInstance().removeStats(customIntArray.getId());
-    arrays.remove(customIntArray);
+    array.remove(customIntArray);
 
   }
 
   public List<CustomIntArr> sort(Comparator<? super CustomIntArr> comparator) {
-    logger.info("Called a method for sorting arrays");
-    var sorted = new ArrayList<>(arrays);
+    logger.info("Called a sorting");
+    var sorted = new ArrayList<>(array);
     sorted.sort(comparator);
     return sorted;
   }
 
   public List<CustomIntArr> query(CustomSpecification specification) {
-    logger.info("Starting query operation with specification: {}",
-            specification != null ? specification.getClass().getSimpleName() : "null");
-    return arrays.stream().filter(specification::specify).toList();
+    logger.info("Query with specification: {}", specification != null ? specification : "null");
+    return array.stream().filter(specification::specify).toList();
   }
 
 

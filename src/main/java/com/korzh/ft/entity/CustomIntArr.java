@@ -6,6 +6,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import java.util.Arrays;
+import java.util.StringJoiner;
 
 public class CustomIntArr implements CustomIntArrayObservable {
   private static final Logger logger = LogManager.getLogger();
@@ -59,9 +60,8 @@ public class CustomIntArr implements CustomIntArrayObservable {
 
   @Override
   public String toString() {
-    return "CustomIntArr [elements=" +
-            Arrays.toString(elements) +
-            ", id=" + id + "]";
+    StringJoiner str = new StringJoiner("|");
+    return str.add(Arrays.toString(elements)).add(Long.toString(id)).toString();
   }
 
   @Override
@@ -92,7 +92,7 @@ public class CustomIntArr implements CustomIntArrayObservable {
 
     public Builder elements(int[] newElements) {
       if (elements != null) {
-        this.elements = newElements.clone();
+        this.elements = newElements;
       }
       return this;
     }
@@ -103,9 +103,7 @@ public class CustomIntArr implements CustomIntArrayObservable {
     }
 
     public CustomIntArr build() {
-      logger.info("new CustomIntArr created: {} ", this);
       return new CustomIntArr(this);
     }
   }
-
 }

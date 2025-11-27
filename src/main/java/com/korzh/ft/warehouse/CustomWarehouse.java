@@ -23,9 +23,9 @@ public class CustomWarehouse {
     return instance;
   }
 
-  public void putStats(Long id, CustomStats customArrayParameters) {
+  public void putStats(long id, CustomStats customArrayParameters) {
     if (customArrayParameters == null) {
-      logger.warn("Attempt to put null stats for id: {}", id);
+      logger.warn("Put null stats for id: {}", id);
       return;
     }
     statsMap.put(id, customArrayParameters);
