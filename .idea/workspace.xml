@@ -6,6 +6,19 @@
   <component name="ChangeListManager">
     <list default="true" id="1878f107-debf-4aed-ba89-5796d054ed1a" name="Changes" comment="www">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/korzh/ft/comparator/CustomComparator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/korzh/ft/comparator/CustomComparator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/korzh/ft/entity/CustomIntArr.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/korzh/ft/entity/CustomIntArr.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/korzh/ft/factory/CustomIntArrFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/korzh/ft/factory/CustomIntArrFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/korzh/ft/reader/impl/StreamReaderImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/korzh/ft/reader/impl/StreamReaderImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/korzh/ft/repository/CustomRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/korzh/ft/repository/CustomRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/korzh/ft/validator/CustomValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/korzh/ft/validator/CustomValidator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/korzh/ft/warehouse/CustomWarehouse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/korzh/ft/warehouse/CustomWarehouse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/korzh/ft/exception/CustomExceptionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/korzh/ft/exception/CustomExceptionTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/korzh/ft/observer/impl/CustomObserverImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/korzh/ft/observer/impl/CustomObserverImplTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/korzh/ft/reader/impl/StreamReaderImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/korzh/ft/reader/impl/StreamReaderImplTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/korzh/ft/reader/impl/TXTReaderImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/korzh/ft/reader/impl/TXTReaderImplTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/korzh/ft/specification/impl/ContainsValueSpecificationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/korzh/ft/specification/impl/ContainsValueSpecificationTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/korzh/ft/specification/impl/IdSpecificationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/korzh/ft/specification/impl/IdSpecificationTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,8 +28,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
+        <option value="Interface" />
+        <option value="Record" />
         <option value="JUnit5 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -34,116 +49,143 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ContainsValueSpecificationTest.specify.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CustomComparatorTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CustomComparatorTest.testCompareById.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CustomComparatorTest.testCompareBySum.executor&quot;: &quot;Debug&quot;,
+    &quot;JUnit.CustomExceptionTest.executor&quot;: &quot;Run&quot;,
     &quot;JUnit.CustomIntArrServiceImplTest.executor&quot;: &quot;Run&quot;,
     &quot;JUnit.CustomIntArrServiceImplTest.findAvg.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CustomIntArrServiceImplTest.findMax.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CustomIntArrServiceImplTest.findNegativeCount.executor&quot;: &quot;Run&quot;,
     &quot;JUnit.CustomIntArrServiceImplTest.firstSort.executor&quot;: &quot;Run&quot;,
     &quot;JUnit.CustomIntArrServiceImplTest.replaceByIndex.executor&quot;: &quot;Run&quot;,
     &quot;JUnit.CustomIntArrServiceImplTest.secondSort.executor&quot;: &quot;Run&quot;,
     &quot;JUnit.CustomIntArrServiceImplTest.thirdSort.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CustomObserverImplTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CustomObserverImplTest.testUpdate_AddsStatsToWarehouse.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CustomObserverImplTest.testUpdate_WithExceptionHandledGracefully.executor&quot;: &quot;Debug&quot;,
+    &quot;JUnit.CustomParserImplTest.getIntArray.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CustomParserImplTest.parseIntArray.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CustomRepositoryTest.add.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CustomRepositoryTest.addAndRemove.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CustomRepositoryTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CustomRepositoryTest.query.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CustomRepositoryTest.remove.executor&quot;: &quot;Debug&quot;,
+    &quot;JUnit.CustomRepositoryTest.sort.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CustomValidatorImplTest.isStringValid (1).executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CustomValidatorImplTest.isStringValid.executor&quot;: &quot;Debug&quot;,
+    &quot;JUnit.CustomValidatorTest.isStringValid (1).executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CustomValidatorTest.isStringValid.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CustomWarehouseTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CustomWarehouseTest.putStats.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CustomWarehouseTest.removeStats.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.IdSpecificationTest.specify.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ParserImplTest.getIntArray.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.StreamReaderImplTest.readFromStringStream.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.StreamReaderImplTest.readIntsFromStream.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.StreamReaderImplTest.readStringsFromStream.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.SumLessThanSpecificationTest.specify.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TXTReaderImplTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TXTReaderImplTest.readFromFile.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TextFileReaderImplTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TextFileReaderImplTest.readFromFile.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ft in first.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.java in first.executor&quot;: &quot;Run&quot;,
     &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/root/InnoTasks&quot;
+    &quot;last_opened_file_path&quot;: &quot;/root/InnoTask2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;
   }
 }</component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
-    <key name="CreateTestDialog.RecentsKey">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources" />
+      <recent name="$PROJECT_DIR$/src/test/java/com/korzh/ft/reader/impl" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.korzh.ft.reader.impl" />
-      <recent name="com.korzh.ft.service" />
-      <recent name="com.korzh.ft.service.impl" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.korzh.ft.repository" />
+      <recent name="com.korzh.ft.observer.impl" />
+      <recent name="com.korzh.ft.warehouse" />
+      <recent name="com.korzh.ft.comparator" />
+      <recent name="com.korzh.ft.specification.impl" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.TextFileReaderImplTest.readFromFile">
+  <component name="RunManager" selected="JUnit.java in first">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.korzh.ft.Main" />
+      <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="first" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.korzh.ft.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CustomIntArrServiceImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CustomComparatorTest.testCompareBySum" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="first" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.korzh.ft.service.impl.*" />
+          <option name="PATTERN" value="com.korzh.ft.comparator.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.korzh.ft.service.impl" />
-      <option name="MAIN_CLASS_NAME" value="com.korzh.ft.service.impl.CustomIntArrServiceImplTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CustomIntArrServiceImplTest.secondSort" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="first" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.korzh.ft.service.impl.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.korzh.ft.service.impl" />
-      <option name="MAIN_CLASS_NAME" value="com.korzh.ft.service.impl.CustomIntArrServiceImplTest" />
-      <option name="METHOD_NAME" value="secondSort" />
+      <option name="PACKAGE_NAME" value="com.korzh.ft.comparator" />
+      <option name="MAIN_CLASS_NAME" value="com.korzh.ft.comparator.CustomComparatorTest" />
+      <option name="METHOD_NAME" value="testCompareBySum" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CustomIntArrServiceImplTest.thirdSort" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CustomParserImplTest.parseIntArray" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="first" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.korzh.ft.service.impl.*" />
+          <option name="PATTERN" value="com.korzh.ft.parser.impl.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.korzh.ft.service.impl" />
-      <option name="MAIN_CLASS_NAME" value="com.korzh.ft.service.impl.CustomIntArrServiceImplTest" />
-      <option name="METHOD_NAME" value="thirdSort" />
+      <option name="PACKAGE_NAME" value="com.korzh.ft.parser.impl" />
+      <option name="MAIN_CLASS_NAME" value="com.korzh.ft.parser.impl.CustomParserImplTest" />
+      <option name="METHOD_NAME" value="parseIntArray(java.lang.String)" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TextFileReaderImplTest.readFromFile" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ft in first" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="first" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.korzh.ft.reader.impl.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.korzh.ft.reader.impl" />
-      <option name="MAIN_CLASS_NAME" value="com.korzh.ft.reader.impl.TextFileReaderImplTest" />
-      <option name="METHOD_NAME" value="readFromFile" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="TEST_OBJECT" value="directory" />
+      <dir value="$PROJECT_DIR$/src/test/java/com/korzh/ft" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="java in first" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="first" />
+      <option name="TEST_OBJECT" value="directory" />
+      <dir value="$PROJECT_DIR$/src/test/java" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.TextFileReaderImplTest.readFromFile" />
+        <item itemvalue="JUnit.java in first" />
         <item itemvalue="Application.Main" />
-        <item itemvalue="JUnit.CustomIntArrServiceImplTest" />
-        <item itemvalue="JUnit.CustomIntArrServiceImplTest.thirdSort" />
-        <item itemvalue="JUnit.CustomIntArrServiceImplTest.secondSort" />
+        <item itemvalue="JUnit.CustomComparatorTest.testCompareBySum" />
+        <item itemvalue="JUnit.ft in first" />
+        <item itemvalue="JUnit.CustomParserImplTest.parseIntArray" />
       </list>
     </recent_temporary>
   </component>
@@ -173,11 +215,6 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/com/korzh/ft/service/impl/CustomIntArrServiceImplTest.java</url>
-          <line>85</line>
-          <option name="timeStamp" value="11" />
-        </line-breakpoint>
         <breakpoint enabled="true" type="java-exception">
           <properties class="java.lang.NumberFormatException" package="java.lang" />
           <option name="timeStamp" value="12" />

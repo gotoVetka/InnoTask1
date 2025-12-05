@@ -2,10 +2,8 @@ package com.korzh.ft.observer.impl;
 
 import com.korzh.ft.entity.CustomIntArr;
 import com.korzh.ft.exception.CustomException;
-import com.korzh.ft.factory.CustomIntArrFactory;
 import com.korzh.ft.stats.CustomStats;
 import com.korzh.ft.warehouse.CustomWarehouse;
-import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -23,7 +21,7 @@ class CustomObserverImplTest {
   }
 
   @Test
-  void testUpdate_AddsStatsToWarehouse() throws CustomException {
+  void addStatsTest() throws CustomException {
     CustomIntArr customArray = new CustomIntArr().builder().elements(new int[]{3,3,3}).id(12313).build();
     long id = customArray.getId();
 
@@ -40,7 +38,7 @@ class CustomObserverImplTest {
   }
 
   @Test
-  void testUpdate_WithExceptionHandledGracefully() {
+  void nullArrayTest() {
     CustomIntArr brokenArray = new CustomIntArr().builder().elements(null).id(123).build();
     assertThrows(NullPointerException.class, () -> observer.update(brokenArray));
   }

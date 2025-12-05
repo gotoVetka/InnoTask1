@@ -1,7 +1,6 @@
 package com.korzh.ft.exception;
 
 import com.korzh.ft.entity.CustomIntArr;
-import com.korzh.ft.factory.CustomIntArrFactory;
 import com.korzh.ft.service.impl.CustomIntArrServiceImpl;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;

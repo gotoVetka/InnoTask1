@@ -7,9 +7,7 @@ import com.korzh.ft.service.impl.CustomIntArrServiceImpl;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-
 import java.util.Comparator;
-
 
 public enum CustomComparator implements Comparator<CustomIntArr> {
 

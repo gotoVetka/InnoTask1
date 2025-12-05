@@ -2,8 +2,6 @@ package com.korzh.ft.factory;
 
 import com.korzh.ft.entity.CustomIntArr;
 
-import java.util.Arrays;
-
 public class CustomIntArrFactory {
 
   private CustomIntArrFactory() {}
@@ -12,6 +10,6 @@ public class CustomIntArrFactory {
     return new CustomIntArr().builder().elements(elements.clone()).id(id).build();
   }
   public CustomIntArr empty() {
-    return new CustomIntArr().builder().elements(new int[0]).id(0).build();
+    return new CustomIntArr().builder().elements(null).id(0).build();
   }
 }

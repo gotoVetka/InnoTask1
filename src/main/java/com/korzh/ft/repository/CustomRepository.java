@@ -32,7 +32,7 @@ public class CustomRepository {
     if (customIntArr == null) {
       throw new CustomException("Bad entity to adding");
     }
-    logger.info("Added custom array {} in repo",customIntArr);
+    logger.info("Added custom array {} in repository",customIntArr);
     customIntArr.notifyObservers();
     array.add(customIntArr);
 

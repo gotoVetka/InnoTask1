@@ -4,7 +4,6 @@ import com.korzh.ft.observer.CustomIntArrayObservable;
 import com.korzh.ft.observer.CustomObserver;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-
 import java.util.Arrays;
 import java.util.StringJoiner;
 
@@ -87,13 +86,13 @@ public class CustomIntArr implements CustomIntArrayObservable {
   }
 
   public static class Builder {
-    private int[] elements = new int[0];
+    private int[] elements;
     private long id;
 
     public Builder elements(int[] newElements) {
-      if (elements != null) {
-        this.elements = newElements;
-      }
+        if(newElements != null){
+          this.elements = newElements.clone();
+        }
       return this;
     }
 

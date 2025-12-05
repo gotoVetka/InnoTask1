@@ -35,7 +35,7 @@ public class CustomWarehouse {
   }
 
   public void removeStats(long id) {
-    logger.info("Remove stats {} with id from repository", id);
+    logger.info("Remove stats with id {} from warehouse", id);
     statsMap.remove(id);
   }
 }
